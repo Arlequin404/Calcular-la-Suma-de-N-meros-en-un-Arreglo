@@ -44,7 +44,7 @@ docker push <tu-usuario>/go-factorial:latest
 ```
 
 ### Enlace al Docker Hub
-Go Factorial Calculator en Docker Hub (https://hub.docker.com/repository/docker/alex8991/go-factorial/general)
+Go Factorial Calculator en Docker Hub https://hub.docker.com/repository/docker/alex8991/go-factorial/general
 
 ### Licencia
 Este repositorio está disponible bajo la Licencia MIT.
@@ -99,7 +99,7 @@ docker push <your-user>/go-factorial:latest
 ```
 
 ### Link to Docker Hub
-Go Factorial Calculator on Docker Hub (https://hub.docker.com/repository/docker/alex8991/go-factorial/general)
+Go Factorial Calculator on Docker Hub https://hub.docker.com/repository/docker/alex8991/go-factorial/general
 
 ### License
 This repository is available under the MIT License.
