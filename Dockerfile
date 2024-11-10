@@ -1,20 +1,17 @@
-# Usar la imagen base de Golang
-FROM golang:1.18
+# Usa una imagen oficial de Go como base
+FROM golang:1.19
 
-# Establecer el directorio de trabajo
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiar el código fuente al contenedor
+# Copia el archivo Go al contenedor
 COPY . .
 
-# Inicializar el módulo de Go
-RUN go mod init go-factorial
+# Compila la aplicación Go
+RUN go build -o app .
 
-# Descargar las dependencias necesarias (si las hubiera)
-RUN go mod tidy
+# Expone el puerto 8080 para la aplicación (si es necesario, en este caso solo imprimimos en consola)
+EXPOSE 8080
 
-# Construir la aplicación Go
-RUN go build -o go-factorial .
-
-# Ejecutar la aplicación
-CMD ["./go-factorial"]
+# Comando para ejecutar la aplicación
+CMD ["./app"]
