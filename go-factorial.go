@@ -1,14 +1,9 @@
-// hello_world.go
-package main
+# circle_area.rb
+radius = 5
+area = Math::PI * radius**2
+puts "The area of the circle is: #{area}"
 
-import "fmt"
-
-func main() {
-    // Imprimir el mensaje "Hola Mundo"
-    fmt.Println("¡Hola, Mundo!")
-
-    // Mantener el programa en ejecución con un bucle infinito
-    for {
-        // Este bucle evita que el programa termine, manteniéndolo activo
-    }
-}
+# Mantener el programa activo para que no termine el contenedor
+loop do
+  sleep 1000  # Mantener el proceso en ejecución
+end
