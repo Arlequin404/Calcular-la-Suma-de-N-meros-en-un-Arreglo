@@ -1,14 +1,20 @@
-# Usa la imagen base oficial de Go
-FROM golang:1.21
+# Usar la imagen base de Golang
+FROM golang:1.18
 
-# Establece el directorio de trabajo dentro del contenedor
+# Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copia el archivo fuente de Go al contenedor
-COPY factorial.go .
+# Copiar el código fuente al contenedor
+COPY . .
 
-# Compila el programa Go
-RUN go build -o factorial .
+# Inicializar el módulo de Go
+RUN go mod init go-factorial
 
-# Comando por defecto para ejecutar el contenedor
-CMD ["./factorial"]
+# Descargar las dependencias necesarias (si las hubiera)
+RUN go mod tidy
+
+# Construir la aplicación Go
+RUN go build -o go-factorial .
+
+# Ejecutar la aplicación
+CMD ["./go-factorial"]
