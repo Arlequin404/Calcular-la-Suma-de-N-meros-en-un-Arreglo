@@ -4,6 +4,11 @@ package main
 import "fmt"
 
 func main() {
-    greetingMessage := "Hello, World!"
-    fmt.Println(greetingMessage)
+    // Imprimir el mensaje "Hola Mundo"
+    fmt.Println("¡Hola, Mundo!")
+
+    // Mantener el programa en ejecución con un bucle infinito
+    for {
+        // Este bucle evita que el programa termine, manteniéndolo activo
+    }
 }
